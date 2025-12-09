@@ -14,5 +14,14 @@
         android:id="@+id/permissionFragment"
         android:name="com.example.yangomockapp.PermissionFragment"
         android:label="fragment_permission"
-        tools:layout="@layout/fragment_permission" />
+        tools:layout="@layout/fragment_permission" >
+        <action
+            android:id="@+id/action_permissionFragment_to_phoneNumberFragment"
+            app:destination="@id/phoneNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.example.yangomockapp.PhoneNumberFragment"
+        android:label="fragment_phone_number"
+        tools:layout="@layout/fragment_phone_number" />
 </navigation>

@@ -1,7 +1,20 @@
 <resources>
     <string name="app_name">YangoMockApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="permission_text">Поделитесь местоположением,чтобы получить самые выгодные предложения</string>
     <string name="next_text">Далее</string>
+    <string name="your_location">Ваше местоположение</string>
+    <string name="unrecognized">Не можем определить</string>
+
+    <string name="privacy_agreement">
+By continuing, I agree to the
+<a href="app://terms">User Agreement</a>,
+<a href="app://licence">Yango\'s Licence Agreement</a>,
+and the processing of my personal information under the
+<a href="app://privacy">Privacy Policy</a>.
+</string>
+
+    <string name="enter_phone_text">Enter your phone number</string>
+    <string name="send_confirmation_text">We will send a confirmation code to it</string>
+
 </resources>

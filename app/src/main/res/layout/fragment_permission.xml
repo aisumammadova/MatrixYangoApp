@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PermissionFragment">
+    tools:context=".PermissionFragment"
+    android:padding="@dimen/screen_horizontal_padding">
 
     <ImageView
         android:id="@+id/yango_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:src="@drawable/yango_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +30,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/yango_logo"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:layout_margin="8dp"/>
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/location_card"
@@ -40,7 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/next_btn"
         style="@style/GreyCardStyle"
-        android:layout_margin="8dp"
         >
 
 
@@ -48,7 +48,7 @@
             android:id="@+id/location_arrow"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/location_arrow_removebg"
+            android:src="@drawable/location_arrow_png"
 
             />
     </androidx.cardview.widget.CardView>
@@ -58,19 +58,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/location_card"
-        android:text="sdjkjkds"
-        app:layout_constraintBaseline_toBaselineOf="@id/location_card"
+        android:text="@string/your_location"
+        app:layout_constraintTop_toTopOf="@id/location_card"
         app:layout_constraintBottom_toTopOf="@id/not_recognized_text"
-        android:textSize="16sp"
+        android:textSize="12sp"
+        android:textColor="#999999"
         />
     <TextView
         android:id="@+id/not_recognized_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/location_card"
-        android:text="asjkjkdjkds"
+        android:text="@string/unrecognized"
         app:layout_constraintTop_toBottomOf="@id/your_location_text"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/location_card"
         />
