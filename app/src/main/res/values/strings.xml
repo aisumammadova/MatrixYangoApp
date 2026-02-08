@@ -16,5 +16,34 @@ and the processing of my personal information under the
 
     <string name="enter_phone_text">Enter your phone number</string>
     <string name="send_confirmation_text">We will send a confirmation code to it</string>
+    <string name="back">Back</string>
+    <string name="profile_avatar">Profile avatar</string>
+    <string name="excellent">Excellent</string>
+    <string name="menu_icon">Menu icon</string>
+    <string name="navigate">Navigate</string>
+
+    <!-- Menu Items -->
+    <string name="discounts_and_gifts">Discounts and gifts</string>
+    <string name="enter_promo_code">Enter promo code</string>
+
+    <string name="payment_methods">Payment methods</string>
+    <string name="cash">Cash</string>
+
+    <string name="improve_maps">Improve maps</string>
+    <string name="add_places_fix_errors">Add places, fix errors</string>
+
+    <string name="history">History</string>
+
+    <string name="my_addresses">My addresses</string>
+
+    <string name="support">Support</string>
+
+    <string name="earn_as_driver">Earn as a driver</string>
+
+    <string name="business_account">Business account</string>
+
+    <string name="safety">Safety</string>
+
+    <string name="settings">Settings</string>
 
 </resources>

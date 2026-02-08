@@ -1,116 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PhoneNumberFragment"
     android:paddingStart="@dimen/screen_horizontal_padding"
     android:paddingEnd="@dimen/screen_horizontal_padding"
-    android:paddingVertical="@dimen/screen_vertical_padding">
+    tools:context=".PhoneNumberFragment"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/yango_logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:contentDescription="Yango logo"
         android:src="@drawable/yango_text"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/privacy_agreement_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/privacy_agreement"
-        android:textSize="18sp"
-        android:textAlignment="viewStart"
-        android:linksClickable="true"
         android:autoLink="none"
+        android:linksClickable="true"
+        android:text="@string/privacy_agreement"
+        android:textAlignment="viewStart"
         android:textColor="@color/dark_grey"
-        android:textColorLink="#62B29D"/>
+        android:textColorLink="#62B29D"
+        android:textSize="@dimen/text_size_input"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/enter_number_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/text_margin"
         android:fontFamily="@font/anton_regular"
         android:text="@string/enter_phone_text"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="@dimen/text_size_h1"
         app:layout_constraintBottom_toTopOf="@id/send_code_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/yango_logo"
         app:layout_constraintVertical_bias="0.100000024"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginBottom="@dimen/text_margin"
-        />
+        app:layout_constraintVertical_chainStyle="packed" />
+
     <TextView
         android:id="@+id/send_code_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/enter_number_txt"
-        app:layout_constraintBottom_toTopOf="@id/number_dial_box"
-        android:text="@string/send_confirmation_text"
-        android:textSize="18sp"
         android:layout_marginBottom="@dimen/text_margin"
-        />
-<LinearLayout
-    android:id="@+id/number_dial_box"
-    app:layout_constraintTop_toBottomOf="@id/send_code_txt"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:background="@drawable/phone_input"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/continue_btn"
-    >
+        android:text="@string/send_confirmation_text"
+        android:textSize="@dimen/text_size_input"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/number_dial_box"
+        app:layout_constraintTop_toBottomOf="@id/enter_number_txt" />
 
-    <TextView
-        android:id="@+id/prefix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🇦🇿 +994"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:padding="12dp"
-        />
-    <EditText
-        android:id="@+id/phoneInput"
+    <LinearLayout
+        android:id="@+id/number_dial_box"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.9"
-        android:hint="00 000 00 00"
-        android:textSize="22sp"
-        android:background="@android:color/transparent"
-        android:inputType="number"
-        android:maxLength="9"
-        android:padding="0dp"
+        android:background="@drawable/phone_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/continue_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/send_code_txt">
 
-        />
+        <TextView
+            android:id="@+id/prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="🇦🇿    +994"
+            android:textSize="@dimen/text_size_h2"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:background="@android:color/transparent"
+            android:hint="00 000 00 00"
+            android:inputType="number"
+            android:maxLength="9"
+            android:padding="0dp"
+            android:textSize="@dimen/text_size_h2"
+            />
 
 
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_close"
-        android:layout_weight="0.1"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="0.1"
+            android:src="@drawable/ic_close" />
 
-</LinearLayout>
+    </LinearLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/continue_btn"
+        style="@style/RedButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/privacy_agreement_txt"
-        style="@style/RedButtonStyle"
         android:text="Continue"
         android:visibility="invisible"
-        />
+        app:layout_constraintBottom_toTopOf="@id/privacy_agreement_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

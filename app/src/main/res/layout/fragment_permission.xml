@@ -5,7 +5,10 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PermissionFragment"
-    android:padding="@dimen/screen_horizontal_padding">
+    android:paddingStart="@dimen/screen_horizontal_padding"
+    android:paddingEnd="@dimen/screen_horizontal_padding"
+    android:background="@color/white"
+    >
 
     <ImageView
         android:id="@+id/yango_logo"
@@ -41,6 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/next_btn"
         style="@style/GreyCardStyle"
+        android:layout_marginTop="8dp"
         >
 
 
@@ -61,8 +65,10 @@
         android:text="@string/your_location"
         app:layout_constraintTop_toTopOf="@id/location_card"
         app:layout_constraintBottom_toTopOf="@id/not_recognized_text"
-        android:textSize="12sp"
-        android:textColor="#999999"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/dark_grey"
+
         />
     <TextView
         android:id="@+id/not_recognized_text"
@@ -73,6 +79,7 @@
         app:layout_constraintTop_toBottomOf="@id/your_location_text"
         android:textSize="16sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/roboto_regular"
         app:layout_constraintBottom_toBottomOf="@id/location_card"
         />
 

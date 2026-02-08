@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#27252F</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#EDEDED</color>
     <color name="red">#FC4631</color>
     <color name="dark_grey">#9A9A9C</color>
+    <color name="light_grey">#312E39</color>
+
+        <color name="background_grey">#F5F5F5</color>
+
+        <color name="text_secondary">#757575</color>
+        <color name="text_hint">#9E9E9E</color>
+
+        <!-- Brand Colors -->
+        <color name="yango_red">#FF5252</color>
+        <color name="excellent_green">#44E55C</color>
+        <color name="driver_gold">#FFD700</color>
+        <color name="driver_card_bg">#2D2D2D</color>
+
+        <!-- Other Colors -->
+        <color name="divider_color">#E0E0E0</color>
+        <color name="input_border">#E0E0E0</color>
+        <color name="hint_color">#9E9E9E</color>
+        <color name="error_red">#D32F2F</color>
 </resources>
